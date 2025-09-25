@@ -28,6 +28,8 @@ import heroBg1 from '@/assets/hero-bg-1.jpg';
 import heroBg2 from '@/assets/hero-bg-2.jpg';
 import heroBg3 from '@/assets/hero-bg-3.jpg';
 
+import homeAutomation3DPic from '@/assets/home-automation-3d.png'
+
 // Partner logos data
 const partners = [
   {
@@ -497,53 +499,84 @@ const Index = () => {
         </div>
       </section>
 
+      {/* 3D Services Visualization Section */}
+      <section className="py-16 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
+              Intelligent Home Ecosystem
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Experience seamless integration of all your home systems through our advanced 3D-controlled platform
+            </p>
+          </div>
+
+          {/* 3D Image Container - Centered and Clean */}
+          <div className="flex justify-center">
+            <div className="relative group max-w-4xl w-full">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl transform group-hover:scale-[1.01] transition-transform duration-500">
+                {/* Your 3D Image */}
+                <img 
+                  src={homeAutomation3DPic} 
+                  alt="NeuroNest 3D Home Automation System"
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+              
+              {/* Subtle decorative elements */}
+              <div className="absolute -inset-4 bg-gradient-to-r from-blue-200/10 to-cyan-200/10 rounded-3xl -z-10 group-hover:scale-105 transition-transform duration-500"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Mission & Vision Section */}
       <section className="py-16 bg-muted/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
               Our Purpose & Vision
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto px-4">
               Driving innovation in automation technology to create smarter, more sustainable living environments
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-8 items-stretch">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 items-stretch">
             {/* Mission Card */}
             <div className="group relative h-full">
-              <div className="h-full rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300">
-                <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-cyan-600 rounded-xl flex items-center justify-center mr-4">
+              <div className="h-full rounded-2xl p-6 md:p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300">
+                <div className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left mb-6">
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-cyan-600 rounded-xl flex items-center justify-center mb-4 sm:mb-0 sm:mr-4">
                     <Target className="h-6 w-6 text-white" />
                   </div>
                   <h3 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-cyan-600 to-cyan-800 bg-clip-text text-transparent">
                     Our Mission
                   </h3>
                 </div>
-                <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-6 text-center sm:text-left">
                   To revolutionize how people interact with their living and working spaces through 
                   innovative automation technology that enhances comfort, efficiency, and security.
                 </p>
-                <div className="flex items-center justify-center space-x-4">
+                <div className="flex flex-wrap justify-center sm:justify-start gap-3 md:gap-4">
                   <div className="flex items-center space-x-2">
-                    <Rocket className="h-5 w-5 text-cyan-600" />
-                    <span className="text-sm font-medium text-muted-foreground">Innovation</span>
+                    <Rocket className="h-4 w-4 md:h-5 md:w-5 text-cyan-600" />
+                    <span className="text-xs md:text-sm font-medium text-muted-foreground">Innovation</span>
                   </div>
-                  <div className="w-px h-6 bg-gray-300"></div>
+                  <div className="w-px h-4 bg-gray-300 hidden sm:block"></div>
                   <div className="flex items-center space-x-2">
-                    <Lightbulb className="h-5 w-5 text-cyan-600" />
-                    <span className="text-sm font-medium text-muted-foreground">Efficiency</span>
+                    <Lightbulb className="h-4 w-4 md:h-5 md:w-5 text-cyan-600" />
+                    <span className="text-xs md:text-sm font-medium text-muted-foreground">Efficiency</span>
                   </div>
-                  <div className="w-px h-6 bg-gray-300"></div>
+                  <div className="w-px h-4 bg-gray-300 hidden sm:block"></div>
                   <div className="flex items-center space-x-2">
-                    <Home className="h-5 w-5 text-cyan-600" />
-                    <span className="text-sm font-medium text-muted-foreground">Comfort</span>
+                    <Home className="h-4 w-4 md:h-5 md:w-5 text-cyan-600" />
+                    <span className="text-xs md:text-sm font-medium text-muted-foreground">Comfort</span>
                   </div>
-                  <div className="w-px h-6 bg-gray-300"></div>
+                  <div className="w-px h-4 bg-gray-300 hidden sm:block"></div>
                   <div className="flex items-center space-x-2">
-                    <Shield className="h-5 w-5 text-cyan-600" />
-                    <span className="text-sm font-medium text-muted-foreground">Security</span>
+                    <Shield className="h-4 w-4 md:h-5 md:w-5 text-cyan-600" />
+                    <span className="text-xs md:text-sm font-medium text-muted-foreground">Security</span>
                   </div>
                 </div>
               </div>
@@ -551,53 +584,33 @@ const Index = () => {
 
             {/* Vision Card */}
             <div className="group relative h-full">
-              <div className="h-full rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300">
-                <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-cyan-600 rounded-xl flex items-center justify-center mr-4">
+              <div className="h-full rounded-2xl p-6 md:p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300">
+                <div className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left mb-6">
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-cyan-600 rounded-xl flex items-center justify-center mb-4 sm:mb-0 sm:mr-4">
                     <Eye className="h-6 w-6 text-white" />
                   </div>
                   <h3 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-cyan-600 to-cyan-800 bg-clip-text text-transparent">
                     Our Vision
                   </h3>
                 </div>
-                <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-6 text-center sm:text-left">
                   Creating a world where intelligent automation seamlessly integrates into everyday life, 
                   making spaces more responsive, sustainable, and enjoyable for everyone.
                 </p>
-                <div className="flex items-center justify-center space-x-4">
+                <div className="flex flex-wrap justify-center sm:justify-start gap-3 md:gap-4">
                   <div className="flex items-center space-x-2">
-                    <Globe className="h-5 w-5 text-cyan-600" />
-                    <span className="text-sm font-medium text-muted-foreground">Global Impact</span>
+                    <Globe className="h-4 w-4 md:h-5 md:w-5 text-cyan-600" />
+                    <span className="text-xs md:text-sm font-medium text-muted-foreground">Global Impact</span>
                   </div>
-                  <div className="w-px h-6 bg-gray-300"></div>
+                  <div className="w-px h-4 bg-gray-300 hidden sm:block"></div>
                   <div className="flex items-center space-x-2">
-                    <Zap className="h-5 w-5 text-cyan-600" />
-                    <span className="text-sm font-medium text-muted-foreground">Sustainability</span>
+                    <Zap className="h-4 w-4 md:h-5 md:w-5 text-cyan-600" />
+                    <span className="text-xs md:text-sm font-medium text-muted-foreground">Sustainability</span>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-
-          {/* Stats Section */}
-          {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
-            <div className="text-center p-6 bg-white rounded-xl shadow-lg border border-gray-100">
-              <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">500+</div>
-              <div className="text-sm font-medium text-gray-600">Homes Automated</div>
-            </div>
-            <div className="text-center p-6 bg-white rounded-xl shadow-lg border border-gray-100">
-              <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">50+</div>
-              <div className="text-sm font-medium text-gray-600">Commercial Projects</div>
-            </div>
-            <div className="text-center p-6 bg-white rounded-xl shadow-lg border border-gray-100">
-              <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">99%</div>
-              <div className="text-sm font-medium text-gray-600">Client Satisfaction</div>
-            </div>
-            <div className="text-center p-6 bg-white rounded-xl shadow-lg border border-gray-100">
-              <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">24/7</div>
-              <div className="text-sm font-medium text-gray-600">Support Available</div>
-            </div>
-          </div> */}
         </div>
       </section>
 
