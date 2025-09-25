@@ -12,7 +12,9 @@ import {
   Users,
   FileText 
 } from 'lucide-react';
-import logo from '@/assets/neuronest-logo.png';
+// import logo from '@/assets/neuronest-logo.png';
+import logo from '@/assets/NeuroNest-2.jpeg';
+
 
 const Header = () => {
   const [isDark, setIsDark] = useState(false);
@@ -50,7 +52,7 @@ const Header = () => {
     { name: 'Services', href: '/services', icon: Settings },
     { name: 'Contact Us', href: '/contact', icon: MessageCircle },
     { name: 'About Us', href: '/about', icon: Users },
-    { name: 'Quotation', href: '/quotation', icon: FileText },
+    // { name: 'Quotation', href: '/quotation', icon: FileText },
   ];
 
   const isActive = (path: string) => {
